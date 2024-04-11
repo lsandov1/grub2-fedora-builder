@@ -1,4 +1,4 @@
-FROM fedora:39
+FROM fedora:40
 
 RUN dnf install -y \
     autoconf \
@@ -19,9 +19,11 @@ RUN git clone --depth 1 --single-branch -b tools \
     https://github.com/vathpela/grub2-fedora.git \
     tools
 
-# grub2 fedora-39 repository
-RUN git clone --depth 1 --single-branch -b fedora-39 \
-    https://github.com/rhboot/grub2 \
+# grub2 repository
+# rhboot   https://github.com/rhboot/grub2 \
+# savannah git://git.savannah.gnu.org/grub.git
+RUN git clone --depth 1 --single-branch -b grub-2.12 \
+    git://git.savannah.gnu.org/grub.git \
     tools/grub2
 
 # create a build folder

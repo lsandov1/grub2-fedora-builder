@@ -1,2 +1,2 @@
 all:
-	docker build -f Dockerfile --tag fedora-39-builder .
+	docker build -f Dockerfile --tag grub2-fedora-builder .
