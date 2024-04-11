@@ -26,8 +26,5 @@ RUN git clone --depth 1 --single-branch -b grub-2.12 \
     git://git.savannah.gnu.org/grub.git \
     tools/grub2
 
-# create a build folder
-RUN mkdir build
-
 # set default dir
 WORKDIR tools/grub2/build
